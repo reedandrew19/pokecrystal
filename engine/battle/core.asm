@@ -8041,6 +8041,22 @@ BattleIntro:
 	xor a
 	ldh [hMapAnims], a
 	farcall PlayBattleMusic
+	call InitEnemy
+	ld hl, wOTPlayerName
+	ldh [wPlayerName], hl
+	ld [wPlayerId], [wOTPlayerID]
+	ld [wPartyCount], [wOTPartyCount]
+	ld [wPartySpecies], [wOTPartyEnd]
+	ld [wPartyEnd], [wOTPartyEnd]
+	ld [wPartyMons], [wOTPartyMons]
+	ld [wPartyMon1], [wOTPartyMon1]
+	ld [wPartyMon2], [wOTPartyMon2]
+	ld [wPartyMon3], [wOTPartyMon3]
+	ld [wPartyMon4], [wOTPartyMon4]
+	ld [wPartyMon5], [wOTPartyMon5]
+	ld [wPartyMon6], [wOTPartyMon6]
+	ld [wPartyMonOT], [wOTPartyMonOT]
+	ld [wPartyMonNicknames], [wOTPartyMonNicknames]
 	farcall ShowLinkBattleParticipants
 	farcall FindFirstAliveMonAndStartBattle
 	call DisableSpriteUpdates
