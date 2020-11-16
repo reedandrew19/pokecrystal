@@ -450,7 +450,7 @@ LearnLevelMoves:
 .check_move
 	ld a, [hli]
 	cp d
-	jr z, .has_move
+	jr z, .learn
 	dec b
 	jr nz, .check_move
 	jr .learn
