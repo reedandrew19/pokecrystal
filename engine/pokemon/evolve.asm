@@ -523,7 +523,7 @@ FillMoves:
 	ld a, [de]
 	inc de
 	cp [hl]
-	jr z, .NextMove
+	jr z, .CheckSlot
 	dec c
 	jr nz, .CheckRepeat
 	pop de
